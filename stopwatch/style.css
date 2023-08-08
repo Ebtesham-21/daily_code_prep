@@ -1,0 +1,74 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    background-image: url("https://img.freepik.com/free-vector/clock-icons-set_1284-4371.jpg?w=740&t=st=1691477539~exp=1691478139~hmac=aebe7844050bde1e39055fdbdc4f0f754670a2c0cc87cb4bbf8bbfd03cc0182d");
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.container {
+    background-color: aliceblue;
+    width: 40%;
+    min-width: 500px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0, 0.338);
+}
+
+.timer-display {
+    position: relative;
+    width: 92%;
+    background: #fff;
+    left: 4%;
+    font-family: 'Roboto mono', monospace;
+    font-size: 30px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+
+}
+
+.buttons {
+    width: 90%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons button {
+    width: 120px;
+    height: 45px;
+    background-color: #bd79fd;
+    color: #fff;
+    border-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: #bd79fd;
+}
+
+.buttons button:nth-last-child(2) {
+    background-color: rgb(239, 61, 61) ;
+}
+
+.buttons button:hover {
+    box-shadow: #121212;
+}
