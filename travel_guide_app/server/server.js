@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3005;
 
-app.use(core());
+app.use(cors());
 app.use(express.json());
 
 mongoose.connect('mongodb://localhost:22017/travelplanner', {
@@ -19,6 +19,8 @@ const itinerarySchema = new mongoose.Schema({
 });
 
 const Itinerary = mongoose.model('Itinerary', itinerarySchema);
+
+
 
 app.post('api/itineraris', async(req, res) => {
     try {
@@ -43,11 +45,9 @@ app.get('/api/itineraris', async(req, res) => {
 
 });
 
-app.listen(port, () => {
+app.listen(3005, () => {
     console.log('Server is running on port ${port}');
 });
 
-app.listen(port, () => {
-    console.log('Server is running on port ${port}');
-});
+
 
