@@ -1,4 +1,6 @@
 const express = require('express');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
@@ -48,6 +50,41 @@ app.get('/api/itineraris', async(req, res) => {
 app.listen(3005, () => {
     console.log('Server is running on port ${port}');
 });
+
+
+const User = mongoose.model('user', new mongoose.Schema({
+    username: String,
+    password: String,
+}));
+
+app.post('/api/register', async (req, res) => {
+    try {
+        const { username, password} = req.body;
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const user = new User({ username, password: hashedPassword});
+        await user.save();
+        res.status(201).json({ message: 'User registered successfully'});
+
+    } catch (error) {
+        res.status(500).json({ message: "An error occurred while registering the user"});
+
+    }
+});
+
+app.post('/api/login', async (req, res) => {
+    try {
+        const {username, password} = req.body;
+        const user = await User.findOne({ username});
+        if(!user) {
+            return res.status(401).json({ error: 'Invalid username or password'});
+        }
+        const isPasswordValid = await bcrypt.compare(password, user.password);
+        if(!isPasswordValid) {
+            return res.status(401).json({error: 'Invalid username or password'});
+        }
+        const token = jtw.sign({})
+    }
+}
 
 
 
