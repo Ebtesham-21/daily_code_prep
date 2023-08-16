@@ -90,6 +90,21 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
+app.put('/api/itineraries/:id', async (req, res) => {
+    try {
+        const updatedItinerary = await Itinerary.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        res.json(updatedItinerary);
+    } catch (error) {
+        res.status(500).json({ error: 'An error occurred while updating the itinerary'});
+    }
+});
+
+app.delete('/api/itineraries/:id', async (req, res) => {
+    try {
+        await Itinerary.findByIdAndDelete
+    }
+})
+
 
 
 

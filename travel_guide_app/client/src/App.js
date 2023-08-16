@@ -3,41 +3,16 @@ import axios from 'axios';
 
 function App() {
   const [destination, setDestination] = useState('');
-  const [token, setToken] = useState('');
-  const [user, setUser] = useState(null);
+ 
   const [dates, setDates] = useState('');
   const [itineraries, setItineraries] = useState([]);
+  const [token, setToken] = useState('');
+  const [user, setUser] = useState(null);
 
-  const authenticateUser = async (username, password) => {
-    try {
-      const response = await axios.post('/api/login', {username, passwrod});
-      setToken(response.data.token);
-    } catch (error) {
-      console.error('Error authenticating user:', error);
-    }
-  };
+ 
+  
 
-  const fetchUser = async () => {
-    try {
-      const response = await axios.get('/api/user', {
-        header: {Authorization: 'Bearer ${token}'},
-      });
-      setUser(response.data);
-    } catch (error) {
-      console.error('Error fetching user:', error);
-    }
-  };
 
-  useEffect(() => {
-    if(token) {
-      fetchUser();
-    }
-  }, [token]);
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    authenticateUser(username, password);
-  };
 
 
 
@@ -66,6 +41,37 @@ function App() {
       console.error('Error creating itinerary:', error);
     }
   };
+  const authenticateUser = async (username, password) => {
+    try {
+      const response = await axios.post('/api/login', { username, password });
+      setToken(response.data.token);
+    } catch (error) {
+      console.error('Error authenticating user:', error);
+    }
+  };
+
+  const fetchUser = async () => {
+    try {
+      const response = await axios.get('/api/user', {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      setUser(response.data);
+    } catch (error) {
+      console.error('Error fetching user:', error);
+    }
+  };
+
+  useEffect(() => {
+    if (token) {
+      fetchUser();
+    }
+  }, [token]);
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    authenticateUser(username, password);
+  };
+
 
   return (
     <div>
