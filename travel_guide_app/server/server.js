@@ -82,9 +82,14 @@ app.post('/api/login', async (req, res) => {
         if(!isPasswordValid) {
             return res.status(401).json({error: 'Invalid username or password'});
         }
-        const token = jtw.sign({})
+        const token = jtw.sign({ userId: user._id},  'secret_key');
+        res.json({ token });
+
+    } catch (error) {
+        res.status(500).json({ error: 'An error occurred while logging in'});
     }
-}
+});
+
 
 
 
