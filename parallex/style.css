@@ -3,7 +3,7 @@
 {
     margin: 0;
     padding: 0;
-    box-sizeing: border-box;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -20,4 +20,46 @@ header {
     padding: 30px 100px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+header .logo
+{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header ul li 
+{
+    list-style: none;
+    margin-left: 20px;
+
+}
+
+header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px ;
+}
+
+header ul li a:hover,
+header ul li a.active
+{
+    background: #fff;
+    color: #2b1055;
+
 }
