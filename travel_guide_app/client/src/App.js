@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function App() {
+const App = () => {
   const [destination, setDestination] = useState('');
  
   const [dates, setDates] = useState('');
@@ -70,6 +70,24 @@ function App() {
   const handleLogin = async (e) => {
     e.preventDefault();
     authenticateUser(username, password);
+  };
+
+  const handleEdit = async (id, diestination, dates) => {
+    try {
+      await axios.put('/api/itineraries/${id}', { destination, dates });
+      fetchItineraries();
+    } catch (error) {
+      console.error('Error updating itinerary:', error);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`/api/itineraries/${id}`);
+      fetchItineraries();
+    } catch (error) {
+      console.error('Error deleting itinerary:', error);
+    }
   };
 
 

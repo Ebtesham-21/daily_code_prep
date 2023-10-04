@@ -21,11 +21,55 @@
         <img src="./images/moon-01.png" alt="moon image" id="moon">
         <img src="./images/mountains_behind.png" alt="mountains behind" id="mountains_behind">
         <h2 id="text">Welcome</h2>
-        <a href="#" class="btn">Explore</a>
+        <a href="#" id="btn">Explore</a>
         <img src="./images/mountains_front.png" alt="mountains front" id="mountains_front">
 
 
     </section>
+    <div id="sec">
+        <h2>Parallex Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem veniam obcaecati asperiores dolorum reprehenderit, dicta quam atque, neque corporis dignissimos officiis deleniti ex eos magni accusamus ducimus sit illo et? <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolore similique cum doloremque nisi. Sapiente ut et, quia culpa laboriosam nam possimus quod aliquid odit doloribus tenetur atque maiores asperiores.
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolore similique cum doloremque nisi. Sapiente ut et, quia culpa laboriosam nam possimus quod aliquid odit doloribus tenetur atque maiores asperiores.
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolore similique cum doloremque nisi. Sapiente ut et, quia culpa laboriosam nam possimus quod aliquid odit doloribus tenetur atque maiores asperiores.
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolore similique cum doloremque nisi. Sapiente ut et, quia culpa laboriosam nam possimus quod aliquid odit doloribus tenetur atque maiores asperiores.
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolore similique cum doloremque nisi. Sapiente ut et, quia culpa laboriosam nam possimus quod aliquid odit doloribus tenetur atque maiores asperiores.
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolore similique cum doloremque nisi. Sapiente ut et, quia culpa laboriosam nam possimus quod aliquid odit doloribus tenetur atque maiores asperiores.
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolore similique cum doloremque nisi. Sapiente ut et, quia culpa laboriosam nam possimus quod aliquid odit doloribus tenetur atque maiores asperiores.
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolore similique cum doloremque nisi. Sapiente ut et, quia culpa laboriosam nam possimus quod aliquid odit doloribus tenetur atque maiores asperiores.
+        <br><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis dolore similique cum doloremque nisi. Sapiente ut et, quia culpa laboriosam nam possimus quod aliquid odit doloribus tenetur atque maiores asperiores.
+        </p>
+
+
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.down = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight =  value * 4 + 'px';
+            text.style.marginTop =  value * 1.5 + 'px';
+            btn.style.marginTop =  value * 1.5 + 'px';
+            
+        })
+    </script>
 
 
     

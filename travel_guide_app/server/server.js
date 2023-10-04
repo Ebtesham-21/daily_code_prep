@@ -101,9 +101,12 @@ app.put('/api/itineraries/:id', async (req, res) => {
 
 app.delete('/api/itineraries/:id', async (req, res) => {
     try {
-        await Itinerary.findByIdAndDelete
+        await Itinerary.findByIdAndDelete(req.params.id);
+        res.json({message: 'Itinerary deleted successfully'});
+    } catch (error) {
+        res.status(500).json({ error: 'An error occurred while deleting the itinerary'});
     }
-})
+});
 
 
 
