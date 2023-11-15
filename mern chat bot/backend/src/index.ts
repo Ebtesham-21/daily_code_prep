@@ -4,7 +4,7 @@ import app from "./utils/app.js";
 
 
 
-
+const PORT = process.env.PORT || 5000;
 connectToDatabase()
     .then(() => {
         app.listen(5000, ()=>
