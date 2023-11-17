@@ -167,7 +167,8 @@ html{
 .section-3 {
     background-color: aliceblue;
     padding: 5rem 0;
-    margin: 5rem;
+    
+    overflow: hidden;
 }
 
 .gallery {
@@ -259,6 +260,7 @@ html{
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s;
+    
 }
 
 .gallery-link:hover .food-description {
