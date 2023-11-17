@@ -36,6 +36,7 @@ html{
     text-transform: capitalize;
     letter-spacing: 0.4rem;
     text-shadow: 0.3rem 0.3rem 0.3rem #a9a9a98a;
+    margin-bottom: 130px;
 
 }
 
@@ -52,4 +53,108 @@ html{
 .section-1-icons i.change{
     transform: translate(-50%, -50%) scale(.5);
     transition: transform 0.3s 0.3s;
+}
+
+/* section 2 */
+
+.section-2 {
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10rem 0;
+}
+
+
+    
+
+
+.cards-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 5%;
+}
+
+/* .card-wrapper {
+    perspective: 1000rem;
+} */
+
+.card {
+    width: 30rem;
+    background-color: aliceblue;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.402)434;
+    position: relative;
+    transform: rotateY(20deg) skewX(-2deg);
+    transition: transform 0.5s, box-shadow 0.5s;
+    border-radius: 1.5rem;
+}
+
+.card:hover {
+    transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
+    box-shadow: 2rem 2rem 2rem #6a6a6a17;
+}
+
+.card::before {
+    content: "";
+    height: 80%;
+    width: 1rem;
+    background-color: rgba(238, 238, 238, 0.535);
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    transform: skewY(45deg);
+    transform-origin: right;
+    box-shadow: -0.1rem -0.1rem 0.1rem rgba(0, 0, 0, 0.193);
+}
+
+
+.card::after {
+    content: "";
+    width: 80%;
+    height: 1rem;
+    background-color: rgba(238, 238, 238, 0.535);
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    transform: skewX(45deg);
+    transform-origin: bottom;
+    box-shadow: -0.1rem -0.1rem 0.1rem rgba(0, 0, 0, 0.279);
+}
+
+
+.card-img {
+    width: 100%;
+}
+
+.card-name {
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: rgb(233, 77, 77);
+    margin: 2rem 0;
+    text-shadow: 0.15rem 0.15rem 0.15rem rgba(0, 0, 0, 0.193) ;
+}
+
+.card-btn {
+    width: 70%;
+    background-color: rgb(233, 77, 77);
+    color: aliceblue;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    text-transform: capitalize;
+    border: none;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    
+
 }
