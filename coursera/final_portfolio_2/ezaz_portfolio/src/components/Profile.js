@@ -2,6 +2,7 @@ import React from 'react';
 import { useMediaQuery} from '@chakra-ui/media-query';
 import { HStack, Icon } from '@chakra-ui/react';
 import { Stack, Circle, Flex, Box, Text, Heading} from "@chakra-ui/layout";
+import { DiCodeigniter, DiAndroid, DiWebplatform } from "react-icons/di";
 
 function Profile() {
     const { isNotSmallerScreen } = useMediaQuery("(min-width:600px)");
@@ -21,10 +22,10 @@ function Profile() {
                 </Text>
                 <Flex direction={isNotSmallerScreen ? "row" : "column"} mt={8}>
                     <Flex rounded="xl" direction="column" mt={4} bg="blue.400" h="30vh" 
-                    w="30vh" justify="flex-end"
+                    w="30vh" justify="flex-end"  _hover={{ bg: "teal.400", }}
                     >
-                        {/* <Icon color="white" p="4" as={DiAndroid} w="24" h="24" /> */}
-                        <Text color="white" p="4" fontSize="xl" fontWeight="semibold"/>
+                        <Icon  color="white" p="4" as={DiAndroid} w="24" h="24" />
+                        <Text color="white" p="4" fontSize="xl" fontWeight="semibold">Android Apps</Text>
 
                     </Flex>
 
