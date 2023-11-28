@@ -19,7 +19,7 @@ return (
             <Box mt={isNotSmallerScreen ? "0":16} align='flex-start'>
                 <Text fontSize="5x1" fontWeight="semibold"> Hi , this is </Text>
                 <Text fontSize="7x1" fontWeight="semibold" bgGradient="linear(to-r, cyan.400, blue.500, purple.600)" bgClip='text'> Ebtesham </Text>
-                <Text color={ isDark ? "gray.200" : "gray.500" }> Programmer specilised in python, js, c++ and have passion for problem solving and cp.  </Text>
+                <Text color={ isDark ? "gray.200" : "gray.500" }> Programmer specilised in python, js, c++ and have passion for problem solving and cpp.  </Text>
 
                 <Button mt={8} colorScheme="blue" onClick={() => window.open("https://www.facebook.com/rupayon.official")}>
                 Hire Me
