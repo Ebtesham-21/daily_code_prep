@@ -24,7 +24,7 @@ const Header = () => {
                     <a href="#projects-section" onClick={handleClick("projects")}>
                         Projects
                     </a>
-                    <a href="contactme-section" onClick={handleClick("projects")>
+                    <a href="contactme-section" onClick={handleClick("projects")}>
                         Contact Me
                     </a>
                 </HStack>
