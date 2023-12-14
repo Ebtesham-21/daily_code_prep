@@ -1,0 +1,1 @@
+print("ONek Din por shuru korlam")
