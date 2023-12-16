@@ -17,4 +17,11 @@ for p in range(0,101):
     else:
         print("Boom")
 
+movies = ["intersteller", "killers to the flower moon", "darknight", "kohi mil gaya" ]
+print(len(movies))
+for movie in movies:
+    print(movie)
+
+
+
  
